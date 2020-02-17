@@ -2,6 +2,8 @@
 An user friendly flash tool for Nodic NRF52 chip.
 
 This tool consists of "pynrfjprog" and GUI written in python. So, it needs nrfjprogdll, JLinkARMDLL and J-link driver the same as "pynrfjprog". But it has an user friendly GUI, NRF52 chip's download, lock and recover can be done by just click some buttons. No need to remember command lines.
+
+
 ![image](https://github.com/songdaw/nrf_flash_tool/blob/master/flash_tool.PNG)
 
 ### **How To Use**
