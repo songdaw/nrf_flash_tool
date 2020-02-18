@@ -184,14 +184,14 @@ class FlashTool:
                 if is_qspi:
                     self.upper.api.qspi_erase(address, 0)
                     self.upper.api.qspi_write(address,
-                                              wdata[data_idx:data_idx + flashtool.FLASH_PAGE_SIZE])
+                                              wdata[data_idx:data_idx + FlashTool.FLASH_PAGE_SIZE])
                 else:
                     self.upper.api.erase_page(address)
                     self.upper.api.write(address,
-                                         wdata[data_idx:data_idx+flashtool.FLASH_PAGE_SIZE],
+                                         wdata[data_idx:data_idx+FlashTool.FLASH_PAGE_SIZE],
                                          True)
-                data_idx += flashtool.FLASH_PAGE_SIZE
-                address += flashtool.FLASH_PAGE_SIZE
+                data_idx += FlashTool.FLASH_PAGE_SIZE
+                address += FlashTool.FLASH_PAGE_SIZE
 
                 data_down += FlashTool.FLASH_PAGE_SIZE
                 self.upper.set_stats_percent(0, data_down * 100 // total_size)
